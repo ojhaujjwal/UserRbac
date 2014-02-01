@@ -2,12 +2,14 @@
 
 namespace UserRbac\Options;
 
-class ModuleOptions implements ModuleOptionsInterface
+use Zend\Stdlib\AbstractOptions;
+
+class ModuleOptions extends AbstractOptions implements ModuleOptionsInterface
 {
     /**
      * @var string 
      */
-    protected $tableName;
+    protected $tableName = 'user_role_linker';
 
     /**
      * @var string      Default Role of unauthenticated user
@@ -22,7 +24,7 @@ class ModuleOptions implements ModuleOptionsInterface
     /**
      * @var string
      */
-    protected $userRoleLinkerEntityClass;
+    protected $userRoleLinkerEntityClass = 'UserRbac\Entity\UserRoleLinker';
 
     /**
      * Sets table name
@@ -78,7 +80,7 @@ class ModuleOptions implements ModuleOptionsInterface
      */
     public function setDefaultUserRole($defaultUserRole)
     {
-        $this->defaultUserRole = $defaultUserRole
+        $this->defaultUserRole = $defaultUserRole;
 
         return $this;
     }

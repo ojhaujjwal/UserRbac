@@ -8,4 +8,6 @@ interface ModuleOptionsInterface
     public function getDefaultGuestRole();
 
     public function getDefaultUserRole();
+
+    public function getUserRoleLinkerEntityClass();
 }

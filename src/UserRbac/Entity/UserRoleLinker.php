@@ -4,6 +4,9 @@ namespace UserRbac\Entity;
 
 use ZfcUser\Entity\UserInterface;
 
+/**
+ * Entity of table, 'user_role_linker'
+ */
 class UserRoleLinker implements UserRoleLinkerInterface
 {
     /**

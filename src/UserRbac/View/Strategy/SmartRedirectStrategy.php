@@ -9,7 +9,6 @@ use Zend\Mvc\MvcEvent;
 
 class SmartRedirectStrategy extends AbstractStrategy
 {
-
     /**
      * @var AuthenticationService
      */
