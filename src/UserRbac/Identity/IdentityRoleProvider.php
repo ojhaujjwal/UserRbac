@@ -7,7 +7,7 @@ use UserRbac\Mapper\UserRoleLinkerMapperInterface;
 use ZfcUser\Entity\UserInterface;
 use UserRbac\Options\ModuleOptionsInterface;
 
-class IdentityRoleProvider implements IdentityInterface
+class IdentityRoleProvider implements IdentityInterface, IdentityRoleProviderInterface
 {
     /**
      * @var ModuleOptionsInterface
@@ -100,7 +100,7 @@ class IdentityRoleProvider implements IdentityInterface
      */
     public function getRoles()
     {
-        return $this->getIdentityRole();
+        return $this->getIdentityRoles();
     }
 
     /**
@@ -108,7 +108,7 @@ class IdentityRoleProvider implements IdentityInterface
      *
      * @return string[]
      */
-    public function getIdentityRole(UserInterface $user = null)
+    public function getIdentityRoles(UserInterface $user = null)
     {
         if ($user === null) {
             $user = $this->getDefaultIdentity();
