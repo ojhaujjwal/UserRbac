@@ -30,6 +30,7 @@ class Module
                 'UserRbac\UserRoleLinkerMapper' => 'UserRbac\Factory\UserRoleLinkerMapperFactory',
                 'UserRbac\Identity\IdentityProvider' => 'UserRbac\Factory\IdentityProviderFactory',
                 'UserRbac\Identity\IdentityRoleProvider' => 'UserRbac\Factory\IdentityRoleProviderFactory',
+                'UserRbac\View\Strategy\SmartRedirectStrategy' => 'UserRbac\Factory\SmartRedirectStrategyFactory',
             ),
             'aliases' => array(
                 'UserRbac\DbAdapter' => 'Zend\Db\Adapter\Adapter',
