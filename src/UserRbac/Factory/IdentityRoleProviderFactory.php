@@ -19,6 +19,7 @@ class IdentityRoleProviderFactory implements FactoryInterface
     {
         $identityRoleProvider = new IdentityRoleProvider();
         $identityRoleProvider->setUserRoleLinkerMapper($serviceLocator->get('UserRbac\UserRoleLinkerMapper'));
+        $identityRoleProvider->setModuleOptions($serviceLocator->get('UserRbac\ModuleOptions'));
         if ($serviceLocator->get('zfcuser_auth_service')->hasIdentity()) {
             $identityRoleProvider->setDefaultIdentity(
                 $serviceLocator->get('zfcuser_auth_service')->getIdentity()

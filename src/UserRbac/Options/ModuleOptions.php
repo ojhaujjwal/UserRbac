@@ -14,7 +14,7 @@ class ModuleOptions extends AbstractOptions implements ModuleOptionsInterface
     /**
      * @var string      Default Role of unauthenticated user
      */
-    protected $defaultGuestRole = 'default';
+    protected $defaultGuestRole = 'guest';
 
     /**
      * @var string      Default Role of authenticated user(when no role of that user is found in the database)
