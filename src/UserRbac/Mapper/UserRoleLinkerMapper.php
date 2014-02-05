@@ -17,11 +17,6 @@ class UserRoleLinkerMapper extends AbstractDbMapper implements UserRoleLinkerMap
      * @var string  Table Name
      */
     protected $tableName = 'user_role_linker';
-
-    /**
-     * @var string $userTableName
-     */
-    protected $userTableName;
     
     /**
      * @var ZfcUserOptions
