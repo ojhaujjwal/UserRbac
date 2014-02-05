@@ -15,6 +15,10 @@ Are your tired of doing tedious work of integrating ZfcUser and ZfcRbac again an
 * Import the schema in `data/mysql.sql`
 * Enable this module in `config/application.config.php`
 * Copy file located in `vendor/ujjwal/user-rbac/config/user-rbac.global.php` to `./config/autoload/user-rbac.global.php` and change the values as you wish
+ 
+
+## How it works
+It gets a user's roles from the table `user_role_linker` and passes the roles to `ZfcRbac`. 
 
 ## Options
 Check the options available in `vendor/ujjwal/user-rbac/config/user-rbac.global.php`. 
