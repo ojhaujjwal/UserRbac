@@ -20,6 +20,7 @@ class UserRoleLinkerMapperFactory implements FactoryInterface
         $class = $options->getUserRoleLinkerEntityClass();
         $mapper->setEntityPrototype(new $class);
         $mapper->setDbAdapter($serviceLocator->get('UserRbac\DbAdapter'));
+        $mapper->setTableName($options->getTableName());
 
         return $mapper;
     }

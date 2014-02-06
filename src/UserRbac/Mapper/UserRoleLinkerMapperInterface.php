@@ -10,6 +10,7 @@ interface UserRoleLinkerMapperInterface
      * finds roles of a user by his/her id
      *
      * @param int $userId
+     * @return Zend\Db\ResultSet\HydratingResultSet|array
      */
     public function findByUserId($userId);
 
@@ -17,6 +18,7 @@ interface UserRoleLinkerMapperInterface
      * finds roles of a user
      *
      * @param UserInterface $user
+     * @return Zend\Db\ResultSet\HydratingResultSet|array
      */
     public function findByUser(UserInterface $user);
 
@@ -24,6 +26,7 @@ interface UserRoleLinkerMapperInterface
      * add a new role of a user
      *
      * @param UserRbac\Entity\UserRoleLinkerInterface $userRoleLinker
+     * @return mixed
      *
      */
     public function insert($userRoleLinker, $tableName = null, HydratorInterface $hydrator = null);
@@ -31,15 +34,10 @@ interface UserRoleLinkerMapperInterface
     /**
      * deletes a role of a user
      *
-     * @param UserRbac\Entity\UserRoleLinkerInterface $userRoleLinker
+     * @param UserRoleLinkerInterface $userRoleLinker
+     * @return mixed
      *
      */
     public function delete($userRoleLinker, $tableName = null);
 
-    /**
-     * finds users with a specific role
-     *
-     * @param string $roleId
-     */
-    public function findByRoleId($roleId);
 }

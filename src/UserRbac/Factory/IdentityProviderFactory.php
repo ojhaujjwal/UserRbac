@@ -8,7 +8,7 @@ use UserRbac\Identity\IdentityProvider;
 class IdentityProviderFactory implements FactoryInterface
 {
     /**
-     * gets identity provider
+     * Gets identity provider
      *
      * @param ServiceLocatorInterface $serviceLocator
      * @return IdentityProvider

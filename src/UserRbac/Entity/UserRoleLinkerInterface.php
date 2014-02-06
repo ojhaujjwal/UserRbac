@@ -5,21 +5,22 @@ namespace UserRbac\Entity;
 interface UserRoleLinkerInterface
 {
     /**
-     * Sets user id
+     * Sets userId
      *
      * @param int $userId
+     * @return self
      */
     public function setUserId($userId);
 
     /**
-     * Gets user id
+     * Gets userId
      * 
      * @return int
      */
     public function getUserId();
 
     /**
-     * Sets Role
+     * Sets roleId
      *
      * @param string $roleId
      * @return self
@@ -27,7 +28,7 @@ interface UserRoleLinkerInterface
     public function setRoleId($roleId);
 
     /**
-     * Gets Role
+     * Gets roleId
      *
      * @return string
      */

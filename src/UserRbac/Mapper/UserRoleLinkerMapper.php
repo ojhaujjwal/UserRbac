@@ -24,10 +24,8 @@ class UserRoleLinkerMapper extends AbstractDbMapper implements UserRoleLinkerMap
     protected $zfcUserOptions;
 
     /**
-     * finds roles of a user by his/her id
+     * {@inheritDoc}
      *
-     * @param int $userId
-     * @return Zend\Db\ResultSet\HydratingResultSet
      */
     public function findByUserId($userId)
     {
@@ -38,10 +36,8 @@ class UserRoleLinkerMapper extends AbstractDbMapper implements UserRoleLinkerMap
     }
 
     /**
-     * finds roles of a user
+     * {@inheritDoc}
      *
-     * @param UserInterface $user
-     * @return Zend\Db\ResultSet\HydratingResultSet
      */
     public function findByUser(UserInterface $user)
     {
