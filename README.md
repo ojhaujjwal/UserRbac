@@ -44,7 +44,7 @@ public function onBootstrap(EventInterface $e)
 ```
 
 ## Known Limitation
-This module is only ideal for small and meduim web sites as a quick and easy way. For complicated use cases, it does not suit.
+This module is only ideal for small and meduim web sites as a quick and easy way. For complicated use cases, it may not suit your need. You may think to use this module,  [HtUserRbacDoctrineORM](https://github.com/hrevert/HtUserRbacDoctrineORM)
 
 ## Note
 This is a work in progress. Use at your own risk!
