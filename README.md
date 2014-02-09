@@ -1,12 +1,12 @@
 UserRbac
 ========
 
-A Zend Framework 2 module to easily integrate ZfcUser and ZfcRbac
+A Zend Framework 2 module to easily integrate [ZfcUser](https://github.com/ZF-Commons/ZfcUser) and [ZfcRbac](https://github.com/ZF-Commons/zfc-rbac)
 
 Are your tired of doing tedious work of integrating ZfcUser and ZfcRbac again and again? Then, you are in the right place. This module comes to save us. This module, simply, gets roles of a user from the database and passes it to the ZfcRbac. You only need to focus on the domain logic of your application. No more repetive tasks.
 
 ## Storage Adapter Modules
-By default, UserRbac ships with support for using Zend\Db for persisting users. However, by installing an optional alternative storage adapter module, you can take advantage of other methods of persisting users:
+By default, UserRbac ships with support for using Zend\Db. However, by installing an optional alternative storage adapter module, you can take advantage of other methods:
 * [OjUserRbacDoctrineORM](https://github.com/ojhaujjwal/OjUserRbacDoctrineORM) - Doctrine2 ORM
 
 ## Features
@@ -22,14 +22,14 @@ By default, UserRbac ships with support for using Zend\Db for persisting users. 
  
 
 ## How it works
-It gets a user's roles from the table `user_role_linker` and passes the roles to `ZfcRbac`. 
+It gets a user's roles from the table `user_role_linker` and passes the roles to `ZfcRbac`. This module is best suited when you use `ZfcRbac\Role\InMemoryRoleProvider` as role provider.
 
 ## Options
 Check the options available in `vendor/ujjwal/user-rbac/config/user-rbac.global.php`. 
 
 ## SmartRedirectStrategy
 
-This module comes with a new strategy called `SmartRedirectStrategy`. This simply redirects only when the user is unauthenticated. Otherwise, it shows a 403 error page!
+This module comes with a new strategy called `SmartRedirectStrategy`. This simply redirects to `ZfcUser`'s login page or route, `zfcuser/login` only when the user is unauthenticated. Otherwise, it shows a 403 error page!
 
 #### Usage
 ```php
