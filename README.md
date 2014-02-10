@@ -48,3 +48,7 @@ This module is only ideal for small and meduim web sites as a quick and easy way
 
 ## Note
 This is a work in progress. Use at your own risk!
+
+
+[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/ojhaujjwal/userrbac/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
+
