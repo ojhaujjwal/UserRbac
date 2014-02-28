@@ -2,7 +2,7 @@
     "name": "ujjwal/user-rbac",
     "description": "A Zend Framework 2 module to easily integrate ZfcUser and ZfcRbac",
     "type": "library",
-    "license": "GNU GENERAL PUBLIC LICENSE",
+    "license": "MIT",
     "keywords": [
         "zf2",
         "module",
