@@ -21,8 +21,8 @@
         "zf-commons/zfc-rbac": "~2.0"
     },
     "autoload": {
-        "psr-0": {
-            "UserRbac": "src/"
+        "psr-4": {
+            "UserRbac\\": "src/"
         },
         "classmap": [
             "./Module.php"

@@ -12,12 +12,9 @@ class IdentityProviderFactory implements FactoryInterface
      *
      * @param  ServiceLocatorInterface $serviceLocator
      * @return IdentityProvider
-     *
      */
     public function createService(ServiceLocatorInterface $serviceLocator)
     {
-        $identityProvider = new IdentityProvider($serviceLocator->get('UserRbac\Identity\IdentityRoleProvider'));
-
-        return $identityProvider;
+        return new IdentityProvider($serviceLocator->get('UserRbac\Identity\IdentityRoleProvider'));
     }
 }
