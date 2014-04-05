@@ -1,5 +1,10 @@
 UserRbac
 ========
+[![Master Branch Build Status](https://api.travis-ci.org/ojhaujjwal/UserRbac.png)](http://travis-ci.org/ojhaujjwal/UserRbac)
+[![Latest Stable Version](https://poser.pugx.org/ujjwal/user-rbac/v/stable.png)](https://packagist.org/packages/ujjwal/user-rbac)
+[![Latest Unstable Version](https://poser.pugx.org/ujjwal/user-rbac/v/unstable.png)](https://packagist.org/packages/ujjwal/user-rbac)
+[![Total Downloads](https://poser.pugx.org/ujjwal/user-rbac/downloads.png)](https://packagist.org/packages/ujjwal/user-rbac)
+[![Scrutinizer](https://scrutinizer-ci.com/g/ojhaujjwal/UserRbac/badges/quality-score.png)](https://scrutinizer-ci.com/g/ojhaujjwal/UserRbac/)
 
 A Zend Framework 2 module to easily integrate [ZfcUser](https://github.com/ZF-Commons/ZfcUser) and [ZfcRbac](https://github.com/ZF-Commons/zfc-rbac)
 
