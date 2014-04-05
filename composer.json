@@ -23,9 +23,6 @@
     "autoload": {
         "psr-4": {
             "UserRbac\\": "src/"
-        },
-        "classmap": [
-            "./Module.php"
-        ]
+        }
     }
 }
