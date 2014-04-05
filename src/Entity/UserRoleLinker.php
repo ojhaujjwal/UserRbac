@@ -36,8 +36,10 @@ class UserRoleLinker implements UserRoleLinkerInterface
     }
 
     /**
-     * {@inheritDoc}
+     * Sets user`s id
      *
+     * @param  int  $userId
+     * @return self
      */
     public function setUserId($userId)
     {
@@ -47,8 +49,9 @@ class UserRoleLinker implements UserRoleLinkerInterface
     }
 
     /**
-     * {@inheritDoc}
+     * Gets user`s id
      *
+     * @return int
      */
     public function getUserId()
     {
@@ -56,7 +59,7 @@ class UserRoleLinker implements UserRoleLinkerInterface
     }
 
     /**
-     * Sets userId
+     * Sets user
      *
      * @param  UserInterface $user
      * @return self
@@ -69,8 +72,10 @@ class UserRoleLinker implements UserRoleLinkerInterface
     }
 
     /**
-     * {@inheritDoc}
+     * Sets role
      *
+     * @param string $roleId
+     * @return self
      */
     public function setRoleId($roleId)
     {
@@ -81,7 +86,6 @@ class UserRoleLinker implements UserRoleLinkerInterface
 
     /**
      * {@inheritDoc}
-     *
      */
     public function getRoleId()
     {

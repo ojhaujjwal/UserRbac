@@ -2,33 +2,12 @@
 
 namespace UserRbac\Entity;
 
+use ZfcUser\Entity\UserInterface;
+
 interface UserRoleLinkerInterface
-{
+{ 
     /**
-     * Sets userId
-     *
-     * @param  int  $userId
-     * @return self
-     */
-    public function setUserId($userId);
-
-    /**
-     * Gets userId
-     *
-     * @return int
-     */
-    public function getUserId();
-
-    /**
-     * Sets roleId
-     *
-     * @param  string $roleId
-     * @return self
-     */
-    public function setRoleId($roleId);
-
-    /**
-     * Gets roleId
+     * Gets role
      *
      * @return string
      */
