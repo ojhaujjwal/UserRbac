@@ -11,7 +11,7 @@ class ModuleOptionsFactoryTest extends \PHPUnit_Framework_TestCase
         $factory = new ModuleOptionsFactory;
         $serviceManager = new ServiceManager;
         $serviceManager->setService('Config', ['user_rbac' => []]);
-        
-        $this->assertInstanceof('UserRbac\Options\ModuleOptions', $factory->createService($serviceManager));        
+
+        $this->assertInstanceof('UserRbac\Options\ModuleOptions', $factory->createService($serviceManager));
     }
 }

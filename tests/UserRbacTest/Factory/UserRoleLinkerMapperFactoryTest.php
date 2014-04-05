@@ -16,7 +16,7 @@ class UserRoleLinkerMapperFactoryTest extends \PHPUnit_Framework_TestCase
             ->disableOriginalConstructor()
             ->getMock();
         $serviceManager->setService('UserRbac\DbAdapter', $adapter);
-        
+
         $this->assertInstanceOf('UserRbac\Mapper\UserRoleLinkerMapper', $factory->createService($serviceManager));
     }
 }

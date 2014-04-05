@@ -1,6 +1,6 @@
 <?php
-return array(
-    'zfc_rbac' => array(
+return [
+    'zfc_rbac' => [
         'identity_provider' => 'UserRbac\Identity\IdentityProvider',
         'redirect_strategy' => [
             'redirect_to_route_connected'    => 'zfcuser',
@@ -8,6 +8,6 @@ return array(
             'append_previous_uri'            => true,
             'previous_uri_query_key'         => 'redirect'
         ],
-    ),
-    'user_rbac' => array()
-);
+    ],
+    'user_rbac' => []
+];

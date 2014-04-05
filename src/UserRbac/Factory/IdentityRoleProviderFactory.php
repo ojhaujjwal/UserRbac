@@ -1,5 +1,5 @@
 <?php
-    
+
 namespace UserRbac\Factory;
 
 use Zend\ServiceManager\ServiceLocatorInterface;
@@ -11,7 +11,7 @@ class IdentityRoleProviderFactory implements FactoryInterface
     /**
      * Gets identity role provider
      *
-     * @param ServiceLocatorInterface $serviceLocator
+     * @param  ServiceLocatorInterface $serviceLocator
      * @return IdentityRoleProvider
      *
      */

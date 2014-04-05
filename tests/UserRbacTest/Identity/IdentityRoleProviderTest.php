@@ -31,7 +31,7 @@ class IdentityRoleProviderTest extends \PHPUnit_Framework_TestCase
         $mapper->expects($this->any())
             ->method('findByUser')
             ->will($this->returnValueMap([[$user, []]]));
-        $this->assertEquals(['default_user_role123'], $identityRoleProvider->getRoles());                    
+        $this->assertEquals(['default_user_role123'], $identityRoleProvider->getRoles());
     }
 
     public function testGetIdentityRoles()
@@ -54,7 +54,7 @@ class IdentityRoleProviderTest extends \PHPUnit_Framework_TestCase
             ->will(
                 $this->returnValueMap($map)
             );
-        $this->assertEquals(['role1', 'role2'], $identityRoleProvider->getRoles());             
-        $this->assertEquals(['role1', 'role3'], $identityRoleProvider->getIdentityRoles($user));  
+        $this->assertEquals(['role1', 'role2'], $identityRoleProvider->getRoles());
+        $this->assertEquals(['role1', 'role3'], $identityRoleProvider->getIdentityRoles($user));
     }
 }

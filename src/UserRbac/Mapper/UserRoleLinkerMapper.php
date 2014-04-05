@@ -1,5 +1,5 @@
 <?php
-    
+
 namespace UserRbac\Mapper;
 
 use ZfcBase\Mapper\AbstractDbMapper;
@@ -13,11 +13,11 @@ use ZfcUser\Options\ModuleOptions as ZfcUserOptions;
 
 class UserRoleLinkerMapper extends AbstractDbMapper implements UserRoleLinkerMapperInterface
 {
-    /** 
+    /**
      * @var string  Table Name
      */
     protected $tableName = 'user_role_linker';
-    
+
     /**
      * @var ZfcUserOptions
      */
@@ -47,7 +47,7 @@ class UserRoleLinkerMapper extends AbstractDbMapper implements UserRoleLinkerMap
     /**
      * finds users with a specific role
      *
-     * @param string $roleId
+     * @param  string                               $roleId
      * @return Zend\Db\ResultSet\HydratingResultSet
      */
     public function findByRoleId($roleId)
@@ -58,19 +58,19 @@ class UserRoleLinkerMapper extends AbstractDbMapper implements UserRoleLinkerMap
             $this->getTableName(),
             $this->getTableName(). '.user_id = ' . $this->getUserTableName(). '.user_id',
             array(),
-            Select::JOIN_INNER 
+            Select::JOIN_INNER
         );
         $select->group($this->getUserTableName(). '.user_id');
 
         $entityPrototype = $this->getZfcUserOptions()->getUserEntityClass();
 
-        return $this->select($select, new $entityPrototype, $this->getZfcUserHydrator());        
+        return $this->select($select, new $entityPrototype, $this->getZfcUserHydrator());
     }
 
     /**
      * add a new role of a user
      *
-     * @param UserRoleLinkerInterface $userRoleLinker
+     * @param  UserRoleLinkerInterface                $userRoleLinker
      * @return Zend\Db\Adapter\Driver\ResultInterface
      *
      */
@@ -84,7 +84,7 @@ class UserRoleLinkerMapper extends AbstractDbMapper implements UserRoleLinkerMap
     /**
      * deletes a role of a user
      *
-     * @param UserRoleLinkerInterface $userRoleLinker
+     * @param  UserRoleLinkerInterface                $userRoleLinker
      * @return Zend\Db\Adapter\Driver\ResultInterface
      *
      */
@@ -98,7 +98,7 @@ class UserRoleLinkerMapper extends AbstractDbMapper implements UserRoleLinkerMap
     /**
      * checks if the provided entity is instance of UserRbac\Entity\UserRoleLinkerInterface
      *
-     * @param mixed $userRoleLinker
+     * @param  mixed                              $userRoleLinker
      * @return void
      * @throws Exception\InvalidArgumentException
      */
@@ -106,13 +106,13 @@ class UserRoleLinkerMapper extends AbstractDbMapper implements UserRoleLinkerMap
     {
         if (!$userRoleLinker instanceof UserRoleLinkerInterface) {
             throw new Exception\InvalidArgumentException('Instance of UserRbac\Entity\UserRoleLinkerInterface expected');
-        }        
+        }
     }
 
     /**
      * Sets table name
      *
-     * @param string $tableName
+     * @param  string $tableName
      * @return self
      */
     public function setTableName($tableName)
@@ -135,7 +135,7 @@ class UserRoleLinkerMapper extends AbstractDbMapper implements UserRoleLinkerMap
     /**
      * Sets ZfcUser Module Options
      *
-     * @param ZfcUserOptions $zfcUserOptions
+     * @param  ZfcUserOptions $zfcUserOptions
      * @return self
      */
     public function setZfcUserOptions(ZfcUserOptions $zfcUserOptions)
@@ -148,7 +148,7 @@ class UserRoleLinkerMapper extends AbstractDbMapper implements UserRoleLinkerMap
     /**
      * Gets ZfcUser Module Options
      *
-     * @return ZfcUserOptions 
+     * @return ZfcUserOptions
      */
     public function getZfcUserOptions()
     {
@@ -168,7 +168,7 @@ class UserRoleLinkerMapper extends AbstractDbMapper implements UserRoleLinkerMap
     /**
      * Sets User Hydrator
      *
-     * @param UserHydrator $hydrator
+     * @param  UserHydrator $hydrator
      * @return self
      */
     public function setZfcUserHydrator(UserHydrator $hydrator)
@@ -178,11 +178,10 @@ class UserRoleLinkerMapper extends AbstractDbMapper implements UserRoleLinkerMap
         return $this;
     }
 
-
     /**
      * Gets User Hydrator
      *
-     * @return UserHydrator 
+     * @return UserHydrator
      */
     public function getZfcUserHydrator()
     {

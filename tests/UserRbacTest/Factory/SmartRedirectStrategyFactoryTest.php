@@ -12,7 +12,7 @@ class SmartRedirectStrategyFactoryTest extends \PHPUnit_Framework_TestCase
         $factory = new SmartRedirectStrategyFactory;
         $serviceManager = new ServiceManager;
         $serviceManager->setService('zfcuser_auth_service', new AuthenticationService);
-        
-        $this->assertInstanceOf('UserRbac\View\Strategy\SmartRedirectStrategy', $factory->createService($serviceManager));        
+
+        $this->assertInstanceOf('UserRbac\View\Strategy\SmartRedirectStrategy', $factory->createService($serviceManager));
     }
 }

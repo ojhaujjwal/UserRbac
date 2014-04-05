@@ -9,8 +9,8 @@ class UserRoleLinkerMapperFactory implements FactoryInterface
 {
     /**
      * Gets user role linker
-     * 
-     * @param ServiceLocatorInterface $serviceLocator
+     *
+     * @param  ServiceLocatorInterface $serviceLocator
      * @return UserRoleLinkerMapper
      */
     public function createService(ServiceLocatorInterface $serviceLocator)

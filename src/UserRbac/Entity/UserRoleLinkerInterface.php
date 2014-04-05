@@ -7,14 +7,14 @@ interface UserRoleLinkerInterface
     /**
      * Sets userId
      *
-     * @param int $userId
+     * @param  int  $userId
      * @return self
      */
     public function setUserId($userId);
 
     /**
      * Gets userId
-     * 
+     *
      * @return int
      */
     public function getUserId();
@@ -22,7 +22,7 @@ interface UserRoleLinkerInterface
     /**
      * Sets roleId
      *
-     * @param string $roleId
+     * @param  string $roleId
      * @return self
      */
     public function setRoleId($roleId);

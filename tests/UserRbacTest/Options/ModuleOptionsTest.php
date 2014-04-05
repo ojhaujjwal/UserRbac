@@ -27,5 +27,5 @@ class ModuleOptionsTest extends \PHPUnit_Framework_TestCase
         $this->assertEquals('member', $moduleOptions->getDefaultUserRole());
         $this->assertEquals('UserRbac\Entity\UserRoleLinker', $moduleOptions->getUserRoleLinkerEntityClass());
     }
-    
+
 }

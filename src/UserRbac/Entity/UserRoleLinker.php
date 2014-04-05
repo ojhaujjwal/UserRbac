@@ -18,12 +18,12 @@ class UserRoleLinker implements UserRoleLinkerInterface
      * @var string $roleId    Role
      */
     protected $roleId;
-    
+
     /**
      * Constructor
      *
      * @param UserInterface|null $user
-     * @param string|null $roleId
+     * @param string|null        $roleId
      */
     public function __construct(UserInterface $user = null, $roleId = null)
     {
@@ -58,7 +58,7 @@ class UserRoleLinker implements UserRoleLinkerInterface
     /**
      * Sets userId
      *
-     * @param UserInterface $user
+     * @param  UserInterface $user
      * @return self
      */
     public function setUser(UserInterface $user)

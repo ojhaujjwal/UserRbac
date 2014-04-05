@@ -29,13 +29,13 @@ class IdentityRoleProvider implements IdentityInterface, IdentityRoleProviderInt
 
     /**
      * Constructor
-     * 
-     * @param UserRoleLinkerMapperInterface $userRoleLinkerMapper,
-     * @param ModuleOptionsInterface $moduleOptions      
+     *
+     * @param  UserRoleLinkerMapperInterface $userRoleLinkerMapper,
+     * @param  ModuleOptionsInterface        $moduleOptions
      * @return self
      */
     public function __construct(
-        UserRoleLinkerMapperInterface $userRoleLinkerMapper, 
+        UserRoleLinkerMapperInterface $userRoleLinkerMapper,
         ModuleOptionsInterface $moduleOptions
     )
     {
@@ -45,8 +45,8 @@ class IdentityRoleProvider implements IdentityInterface, IdentityRoleProviderInt
 
     /**
      * Gets module options
-     * 
-     * @return ModuleOptionsInterface 
+     *
+     * @return ModuleOptionsInterface
      */
     public function getModuleOptions()
     {
@@ -56,7 +56,7 @@ class IdentityRoleProvider implements IdentityInterface, IdentityRoleProviderInt
     /**
      * Gets user role linker mapper
      *
-     * @return UserRoleLinkerMapperInterface 
+     * @return UserRoleLinkerMapperInterface
      */
     public function getUserRoleLinkerMapper()
     {
@@ -66,8 +66,8 @@ class IdentityRoleProvider implements IdentityInterface, IdentityRoleProviderInt
     /**
      * Sets identity of currently logged in user
      *
-     * @param UserInterface $defaultIdentity
-     * @return self 
+     * @param  UserInterface $defaultIdentity
+     * @return self
      */
     public function setDefaultIdentity(UserInterface $defaultIdentity)
     {
@@ -79,7 +79,7 @@ class IdentityRoleProvider implements IdentityInterface, IdentityRoleProviderInt
     /**
      * Gets identity of currently logged in user
      *
-     * @return UserInterface  
+     * @return UserInterface
      */
     public function getDefaultIdentity()
     {
@@ -109,7 +109,7 @@ class IdentityRoleProvider implements IdentityInterface, IdentityRoleProviderInt
                 return (array) $this->getModuleOptions()->getDefaultGuestRole();
             }
         }
-        
+
         $resultSet = $this->getUserRoleLinkerMapper()->findByUser($user);
 
         if (count($resultSet) > 0) { // if exists in database

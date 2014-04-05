@@ -16,7 +16,7 @@ $options = array(
 
     /**
      * Role Of unauthenticated user
-     * 
+     *
      * Specify Role of unauthenticated user(when user is not logged in).
      * Default: 'guest'
      */
@@ -24,7 +24,7 @@ $options = array(
 
     /**
      * Default Role Of authenticated user
-     * 
+     *
      * Default Role of authenticated user(when no role of that user is found in the database)
      * Default: 'member'
      */

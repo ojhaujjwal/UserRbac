@@ -7,7 +7,7 @@ use Zend\Stdlib\AbstractOptions;
 class ModuleOptions extends AbstractOptions implements ModuleOptionsInterface
 {
     /**
-     * @var string 
+     * @var string
      */
     protected $tableName = 'user_role_linker';
 
@@ -42,7 +42,7 @@ class ModuleOptions extends AbstractOptions implements ModuleOptionsInterface
     /**
      * Gets table name
      *
-     * @return string 
+     * @return string
      */
     public function getTableName()
     {
@@ -52,7 +52,7 @@ class ModuleOptions extends AbstractOptions implements ModuleOptionsInterface
     /**
      * Sets default Role for unauthenticated user
      *
-     * @param string $defaultGuestRole
+     * @param  string $defaultGuestRole
      * @return self
      */
     public function setDefaultGuestRole($defaultGuestRole)
@@ -65,7 +65,7 @@ class ModuleOptions extends AbstractOptions implements ModuleOptionsInterface
     /**
      * Gets default Role for unauthenticated user
      *
-     * @return string 
+     * @return string
      */
     public function getDefaultGuestRole()
     {
@@ -75,7 +75,7 @@ class ModuleOptions extends AbstractOptions implements ModuleOptionsInterface
     /**
      * Sets default user role
      *
-     * @param string $defaultUserRole
+     * @param  string $defaultUserRole
      * @return self
      */
     public function setDefaultUserRole($defaultUserRole)
@@ -88,7 +88,7 @@ class ModuleOptions extends AbstractOptions implements ModuleOptionsInterface
     /**
      * Gets default user role
      *
-     * @return string 
+     * @return string
      */
     public function getDefaultUserRole()
     {
@@ -98,7 +98,7 @@ class ModuleOptions extends AbstractOptions implements ModuleOptionsInterface
     /**
      * Sets entity class of user_role_linker
      *
-     * @param string $userRoleLinkerEntityClass
+     * @param  string $userRoleLinkerEntityClass
      * @return self
      */
     public function setUserRoleLinkerEntityClass($userRoleLinkerEntityClass)
@@ -111,7 +111,7 @@ class ModuleOptions extends AbstractOptions implements ModuleOptionsInterface
     /**
      * Gets entity class of user_role_linker
      *
-     * @return string 
+     * @return string
      */
     public function getUserRoleLinkerEntityClass()
     {
