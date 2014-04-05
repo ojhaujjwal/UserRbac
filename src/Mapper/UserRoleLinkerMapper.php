@@ -24,8 +24,10 @@ class UserRoleLinkerMapper extends AbstractDbMapper implements UserRoleLinkerMap
     protected $zfcUserOptions;
 
     /**
-     * {@inheritDoc}
+     * Finds roles of a user by his/her id
      *
+     * @param  int                                        $userId
+     * @return Zend\Db\ResultSet\HydratingResultSet|array
      */
     public function findByUserId($userId)
     {
@@ -45,7 +47,7 @@ class UserRoleLinkerMapper extends AbstractDbMapper implements UserRoleLinkerMap
     }
 
     /**
-     * finds users with a specific role
+     * Finds users with a specific role
      *
      * @param  string                               $roleId
      * @return Zend\Db\ResultSet\HydratingResultSet
@@ -68,11 +70,10 @@ class UserRoleLinkerMapper extends AbstractDbMapper implements UserRoleLinkerMap
     }
 
     /**
-     * add a new role of a user
+     * Add a new role of a user
      *
-     * @param  UserRoleLinkerInterface                $userRoleLinker
-     * @return Zend\Db\Adapter\Driver\ResultInterface
-     *
+     * @param  UserRbac\Entity\UserRoleLinkerInterface $userRoleLinker
+     * @return mixed
      */
     public function insert($userRoleLinker, $tableName = null, HydratorInterface $hydrator = null)
     {
@@ -82,11 +83,10 @@ class UserRoleLinkerMapper extends AbstractDbMapper implements UserRoleLinkerMap
     }
 
     /**
-     * deletes a role of a user
+     * Deletes a role of a user
      *
-     * @param  UserRoleLinkerInterface                $userRoleLinker
-     * @return Zend\Db\Adapter\Driver\ResultInterface
-     *
+     * @param  UserRoleLinkerInterface $userRoleLinker
+     * @return mixed
      */
     public function delete($userRoleLinker, $tableName = null)
     {
@@ -96,7 +96,7 @@ class UserRoleLinkerMapper extends AbstractDbMapper implements UserRoleLinkerMap
     }
 
     /**
-     * checks if the provided entity is instance of UserRbac\Entity\UserRoleLinkerInterface
+     * Checks if the provided entity is instance of UserRbac\Entity\UserRoleLinkerInterface
      *
      * @param  mixed                              $userRoleLinker
      * @return void
