@@ -51,6 +51,3 @@ public function onBootstrap(EventInterface $e)
 ## Known Limitation
 This module is only ideal for small and meduim web sites as a quick and easy way. For complicated use cases, it may not suit your need.
 
-
-[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/ojhaujjwal/userrbac/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
-
