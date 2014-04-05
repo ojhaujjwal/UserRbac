@@ -16,8 +16,8 @@ class IdentityProviderFactory implements FactoryInterface
      */
     public function createService(ServiceLocatorInterface $serviceLocator)
     {
-        $identityProvider = new IdentityProvider();
-        $identityProvider->setIdentityRoleProvider($serviceLocator->get('UserRbac\Identity\IdentityRoleProvider'));
+        $identityProvider = new IdentityProvider($serviceLocator->get('UserRbac\Identity\IdentityRoleProvider'));
+        
         return $identityProvider;
     }
 }

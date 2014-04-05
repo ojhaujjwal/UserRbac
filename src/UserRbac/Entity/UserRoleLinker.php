@@ -18,6 +18,22 @@ class UserRoleLinker implements UserRoleLinkerInterface
      * @var string $roleId    Role
      */
     protected $roleId;
+    
+    /**
+     * Constructor
+     *
+     * @param UserInterface|null $user
+     * @param string|null $roleId
+     */
+    public function __construct(UserInterface $user = null, $roleId = null)
+    {
+        if ($user) {
+            $this->setUser($user);
+        }
+        if ($roleId) {
+            $this->setRoleId($roleId);
+        }
+    }
 
     /**
      * {@inheritDoc}

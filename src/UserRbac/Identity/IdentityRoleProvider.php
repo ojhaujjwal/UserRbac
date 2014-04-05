@@ -7,6 +7,9 @@ use UserRbac\Mapper\UserRoleLinkerMapperInterface;
 use ZfcUser\Entity\UserInterface;
 use UserRbac\Options\ModuleOptionsInterface;
 
+/**
+ * This class get roles of a identity
+ */
 class IdentityRoleProvider implements IdentityInterface, IdentityRoleProviderInterface
 {
     /**
@@ -25,16 +28,19 @@ class IdentityRoleProvider implements IdentityInterface, IdentityRoleProviderInt
     protected $defaultIdentity;
 
     /**
-     * Sets module options
+     * Constructor
      * 
-     * @param ModuleOptionsInterface $moduleOptions
+     * @param UserRoleLinkerMapperInterface $userRoleLinkerMapper,
+     * @param ModuleOptionsInterface $moduleOptions      
      * @return self
      */
-    public function setModuleOptions(ModuleOptionsInterface $moduleOptions)
+    public function __construct(
+        UserRoleLinkerMapperInterface $userRoleLinkerMapper, 
+        ModuleOptionsInterface $moduleOptions
+    )
     {
+        $this->userRoleLinkerMapper = $userRoleLinkerMapper;
         $this->moduleOptions = $moduleOptions;
-
-        return $this;
     }
 
     /**
@@ -45,19 +51,6 @@ class IdentityRoleProvider implements IdentityInterface, IdentityRoleProviderInt
     public function getModuleOptions()
     {
         return $this->moduleOptions;
-    }
-
-    /**
-     * Sets user role linker mapper
-     *
-     * @param UserRoleLinkerMapperInterface $userRoleLinkerMapper
-     * @return self
-     */
-    public function setUserRoleLinkerMapper(UserRoleLinkerMapperInterface $userRoleLinkerMapper)
-    {
-        $this->userRoleLinkerMapper = $userRoleLinkerMapper;
-
-        return $this;
     }
 
     /**

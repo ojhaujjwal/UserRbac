@@ -8,5 +8,6 @@ return array(
             'append_previous_uri'            => true,
             'previous_uri_query_key'         => 'redirect'
         ],
-    )
+    ),
+    'user_rbac' => array()
 );

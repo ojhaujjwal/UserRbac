@@ -8,18 +8,13 @@ class IdentityProvider implements IdentityProviderInterface
 {
     protected $identityRoleProvider;
 
-    public function setIdentityRoleProvider(IdentityRoleProvider $identityRoleProvider)
+    public function __construct(IdentityRoleProvider $identityRoleProvider)
     {
         $this->identityRoleProvider = $identityRoleProvider;
     }
 
-    public function getIdentityRoleProvider()
-    {
-        return $this->identityRoleProvider;
-    }
-
     public function getIdentity()
     {
-        return $this->getIdentityRoleProvider();
+        return $this->identityRoleProvider;
     }
 }

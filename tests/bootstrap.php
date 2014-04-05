@@ -1,11 +1,5 @@
 <?php
 
-namespace UserRbac\Test;
-
-use RuntimeException;
-
-chdir(__DIR__);
-
 if (file_exists(__DIR__ . '/../../../../vendor/autoload.php')) {
     $loader = include __DIR__ . '/../../../../vendor/autoload.php';
 } elseif (file_exists(__DIR__ . '/../../../vendor/autoload.php')) {
