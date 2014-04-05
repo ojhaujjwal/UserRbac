@@ -24,6 +24,11 @@ class UserRoleLinkerMapper extends AbstractDbMapper implements UserRoleLinkerMap
     protected $zfcUserOptions;
 
     /**
+     * @var HydratorInterface
+     */
+    protected $zfcUserHydrator;
+
+    /**
      * Finds roles of a user by his/her id
      *
      * @param  int                                        $userId
