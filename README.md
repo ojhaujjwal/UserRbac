@@ -20,7 +20,7 @@ By default, UserRbac ships with support for using Zend\Db. However, by installin
 3. Addition of `SmartRedirectStrategy`
 
 ## Installation
-* Add `"ujjwal/user-rbac": "0.0.*",` to your composer.json and run `php composer.phar update`
+* Add `"ujjwal/user-rbac": "0.1.*",` to your composer.json and run `php composer.phar update`
 * Import the schema in `data/mysql.sql`
 * Enable this module in `config/application.config.php`
 * Copy file located in `vendor/ujjwal/user-rbac/config/user-rbac.global.php` to `./config/autoload/user-rbac.global.php` and change the values as you wish
