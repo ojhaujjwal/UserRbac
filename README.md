@@ -10,10 +10,6 @@ A Zend Framework 2 module to easily integrate [ZfcUser](https://github.com/ZF-Co
 
 Are your tired of doing tedious work of integrating ZfcUser and ZfcRbac again and again? Then, you are in the right place. This module comes to save us. This module, simply, gets roles of a user from the database and passes it to the ZfcRbac. You only need to focus on the domain logic of your application. No more repetive tasks.
 
-## Storage Adapter Modules
-By default, UserRbac ships with support for using Zend\Db. However, by installing an optional alternative storage adapter module, you can take advantage of other methods:
-* [OjUserRbacDoctrineORM](https://github.com/ojhaujjwal/OjUserRbacDoctrineORM) - Doctrine2 ORM
-
 ## Features
 1. No need to write code for integrating ZfcUser and ZfcRbac
 2. A user`s roles are easily retrievable from the database
