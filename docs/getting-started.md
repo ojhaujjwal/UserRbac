@@ -1,5 +1,5 @@
-Cookbook
-===========
+Getting Start Guide
+====================
 This module only deals linking user with the role and rest is handled by [ZfcRbac](https://github.com/ZF-Commons/zfc-rbac).
 
 Just for example, we will have three roles:
