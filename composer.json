@@ -20,6 +20,9 @@
         "zf-commons/zfc-user": ">=0.1,<2.0",
         "zf-commons/zfc-rbac": "~2.0"
     },
+    "require-dev": {
+        "phpunit/phpunit": "4.*"
+    },
     "autoload": {
         "psr-4": {
             "UserRbac\\": "src/"
