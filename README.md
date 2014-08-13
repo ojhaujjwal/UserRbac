@@ -21,6 +21,7 @@ Are your tired of doing tedious work of integrating ZfcUser and ZfcRbac again an
 * Import the schema in `data/mysql.sql`
 * Enable this module in `config/application.config.php`
 * Copy file located in `vendor/ujjwal/user-rbac/config/user-rbac.global.php` to `./config/autoload/user-rbac.global.php` and change the values as you wish
+* Register UserRbac in ZfcRbac. In `zfc_rbac.global.php` set `'identity_provider' => 'UserRbac\Identity\IdentityProvider'`
  
 
 ## How it works
